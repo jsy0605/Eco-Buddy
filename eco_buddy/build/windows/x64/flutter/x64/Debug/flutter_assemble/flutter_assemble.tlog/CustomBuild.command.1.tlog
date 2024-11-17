@@ -1,0 +1,28 @@
+^C:\DEV\ECO-BUDDY\ECO_BUDDY\BUILD\WINDOWS\X64\CMAKEFILES\DB17212C4B079A64DA2D05B0D9F3A2F2\FLUTTER_WINDOWS.DLL.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\src\flutter PROJECT_DIR=C:\dev\Eco-Buddy\eco_buddy FLUTTER_ROOT=C:\src\flutter FLUTTER_EPHEMERAL_DIR=C:\dev\Eco-Buddy\eco_buddy\windows\flutter\ephemeral PROJECT_DIR=C:\dev\Eco-Buddy\eco_buddy FLUTTER_TARGET=C:\dev\Eco-Buddy\eco_buddy\lib\main.dart DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=C:\dev\Eco-Buddy\eco_buddy\.dart_tool\package_config.json C:/src/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\DEV\ECO-BUDDY\ECO_BUDDY\BUILD\WINDOWS\X64\CMAKEFILES\D97316D2CB52BA947EAD5D1DAC0B7212\FLUTTER_ASSEMBLE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\DEV\ECO-BUDDY\ECO_BUDDY\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/dev/Eco-Buddy/eco_buddy/windows -BC:/dev/Eco-Buddy/eco_buddy/build/windows/x64 --check-stamp-file C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

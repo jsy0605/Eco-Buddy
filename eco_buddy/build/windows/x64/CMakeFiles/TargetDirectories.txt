@@ -1,0 +1,10 @@
+C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/CMakeFiles/INSTALL.dir
+C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/CMakeFiles/ALL_BUILD.dir
+C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/CMakeFiles/ZERO_CHECK.dir
+C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/flutter/CMakeFiles/flutter_wrapper_plugin.dir
+C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/flutter/CMakeFiles/flutter_wrapper_app.dir
+C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/flutter/CMakeFiles/flutter_assemble.dir
+C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/flutter/CMakeFiles/INSTALL.dir
+C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/CMakeFiles/eco_buddy.dir
+C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/CMakeFiles/INSTALL.dir
+C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/CMakeFiles/ALL_BUILD.dir

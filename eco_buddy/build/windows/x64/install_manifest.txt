@@ -1,0 +1,12 @@
+C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/icudtl.dat
+C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/flutter_windows.dll
+C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin
+C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.json
+C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/assets/images/icon/kakao_icon.png
+C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/assets/images/icon/naver_icon.png
+C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/FontManifest.json
+C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/kernel_blob.bin
+C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/NOTICES.Z
+C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/shaders/ink_sparkle.frag
