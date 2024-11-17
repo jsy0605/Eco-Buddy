@@ -2,8 +2,15 @@ C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/icudtl.dat
 C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/flutter_windows.dll
 C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin
 C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.json
+C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/assets/images/background/background_1.png
+C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/assets/images/character/character_1.png
+C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/assets/images/character/character_2.png
+C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/assets/images/character/character_3.png
+C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/assets/images/floor/floor_1.png
 C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/assets/images/icon/kakao_icon.png
+C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/assets/images/icon/leaf_token.png
 C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/assets/images/icon/naver_icon.png
+C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/assets/images/icon/user_icon.png
 C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/FontManifest.json
 C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
 C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/kernel_blob.bin

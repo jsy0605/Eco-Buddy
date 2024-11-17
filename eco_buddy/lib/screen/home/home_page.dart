@@ -1,30 +1,27 @@
 import 'package:flutter/material.dart';
+import '../../common/widget/custom_bottom_bar.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  // 배경, 바닥, 캐릭터 이미지 경로 변수
-  String backgroundImage = 'assets/images/background/background_1.png';
-  String floorImage = 'assets/images/floor/floor_1.png';
-  String characterImage = 'assets/images/character/character_1.png';
-
-  Offset characterPosition = const Offset(100, 300); // 캐릭터 초기 위치
-
-  @override
   Widget build(BuildContext context) {
+    // 화면 높이 계산
+    final screenHeight = MediaQuery.of(context).size.height;
+    final screenWidth = MediaQuery.of(context).size.width;
+
+    // 캐릭터 위치 (화면 정중앙보다 약간 아래 + 10px 더 아래)
+    final characterTopPosition = screenHeight * 0.56; // 기존 0.55에서 10px 추가로 아래로
+    final characterLeftPosition = (screenWidth - 120) / 2; // 가로 중앙 (캐릭터 크기 고려)
+
     return Scaffold(
-      backgroundColor: Colors.amber[50], // 배경 색상
+      backgroundColor: const Color(0xFFFFF8E1),
       body: Stack(
         children: [
           // 배경 이미지
           Positioned.fill(
             child: Image.asset(
-              backgroundImage, // 동적으로 설정된 배경 이미지
+              'assets/images/background/background_1.png',
               fit: BoxFit.cover,
             ),
           ),
@@ -34,12 +31,12 @@ class _HomePageState extends State<HomePage> {
             left: 0,
             right: 0,
             child: Image.asset(
-              floorImage, // 동적으로 설정된 바닥 이미지
+              'assets/images/floor/floor_1.png',
               fit: BoxFit.cover,
-              height: 100,
+              height: 150,
             ),
           ),
-          // 상단 사용자 정보
+          // 상단 사용자 정보 및 토큰
           Positioned(
             top: 20,
             left: 16,
@@ -47,154 +44,99 @@ class _HomePageState extends State<HomePage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                // 사용자 아이콘
-                Container(
-                  padding: const EdgeInsets.all(8.0),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(50),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.shade300,
-                        blurRadius: 5,
-                        offset: const Offset(0, 2),
-                      ),
-                    ],
-                  ),
-                  child: Image.asset(
-                    'assets/images/icon/user_icon.png', // 사용자 아이콘 이미지
-                    width: 40,
-                    height: 40,
-                  ),
-                ),
-                // 사용자 레벨 및 게이지
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                    child: Column(
-                      children: [
-                        Text(
-                          '레벨 10',
-                          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                        ),
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(8.0),
-                          child: LinearProgressIndicator(
-                            value: 0.7, // 경험치 게이지
-                            backgroundColor: Colors.grey[200],
-                            valueColor: const AlwaysStoppedAnimation(Colors.green),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                // 토큰 수 표시
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(12.0),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.shade300,
-                        blurRadius: 5,
-                        offset: const Offset(0, 2),
-                      ),
-                    ],
-                  ),
-                  child: Row(
-                    children: const [
-                      Icon(Icons.monetization_on, color: Colors.yellow, size: 20),
-                      SizedBox(width: 4),
-                      Text(
-                        '120',
-                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
-                ),
+                _buildUserInfo(),
+                _buildTokenInfo(),
               ],
             ),
           ),
-          // 드래그 가능한 캐릭터
+          // 캐릭터 고정 위치
           Positioned(
-            left: characterPosition.dx,
-            top: characterPosition.dy,
-            child: GestureDetector(
-              onPanUpdate: (details) {
-                setState(() {
-                  characterPosition += details.delta; // 캐릭터 위치 업데이트
-                });
-              },
-              child: Image.asset(
-                characterImage, // 동적으로 설정된 캐릭터 이미지
-                width: 100,
-                height: 100,
-              ),
+            top: characterTopPosition,
+            left: characterLeftPosition,
+            child: Image.asset(
+              'assets/images/character/character_1.png',
+              width: 160, // 기존 크기보다 더 큼
+              height: 160, // 기존 크기보다 더 큼
             ),
           ),
         ],
       ),
-      // 하단 버튼 추가
-      bottomNavigationBar: Column(
-        mainAxisSize: MainAxisSize.min,
+      bottomNavigationBar: CustomBottomBar(
+        currentIndex: 1, // 홈 페이지는 인덱스 1
+        onTap: (index) {
+          if (index != 1) {
+            switch (index) {
+              case 0:
+                Navigator.pushNamed(context, '/stats'); // 통계 페이지로 이동
+                break;
+              case 2:
+                Navigator.pushNamed(context, '/menu'); // 메뉴 페이지로 이동
+                break;
+            }
+          }
+        },
+      ),
+    );
+  }
+
+  // 사용자 정보 위젯
+  Widget _buildUserInfo() {
+    return Container(
+      decoration: _buildInfoBoxDecoration(),
+      padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+      child: Row(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    // 배경 이미지 변경
-                    backgroundImage = 'assets/images/background/background_1.png';
-                  });
-                },
-                child: const Text('배경 변경'),
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    // 바닥 이미지 변경
-                    floorImage = 'assets/images/floor/floor_1.png';
-                  });
-                },
-                child: const Text('바닥 변경'),
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    // 캐릭터 이미지 변경
-                    characterImage = 'assets/images/character/character_1.png';
-                  });
-                },
-                child: const Text('캐릭터 변경'),
-              ),
-            ],
+          CircleAvatar(
+            radius: 20,
+            backgroundColor: const Color(0xFFA57C50),
+            child: const Icon(Icons.person, color: Colors.white),
           ),
-          BottomNavigationBar(
-            currentIndex: 1, // 기본 선택된 탭 (홈)
-            items: const [
-              BottomNavigationBarItem(
-                icon: Icon(Icons.bar_chart),
-                label: '탄소 발자국',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.home),
-                label: '홈',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.menu),
-                label: '메뉴',
-              ),
-            ],
-            selectedItemColor: Colors.green,
-            onTap: (index) {
-              // 탭 이동 로직 추가
-              print('탭 $index 선택됨');
-            },
+          const SizedBox(width: 16.0),
+          const Text(
+            '캐릭터 이름',
+            style: TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ],
+      ),
+    );
+  }
+
+  // 토큰 정보 위젯
+  Widget _buildTokenInfo() {
+    return Container(
+      decoration: _buildInfoBoxDecoration(),
+      padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+      child: Row(
+        children: [
+          CircleAvatar(
+            radius: 20,
+            backgroundColor: Colors.transparent,
+            backgroundImage: AssetImage('assets/images/icon/leaf_token.png'),
+          ),
+          const SizedBox(width: 16.0),
+          const Text(
+            '10,000',
+            style: TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // 공통 박스 데코레이션
+  BoxDecoration _buildInfoBoxDecoration() {
+    return BoxDecoration(
+      color: const Color(0xFFDCC6A0),
+      borderRadius: BorderRadius.circular(25.0),
+      border: Border.all(
+        color: const Color(0xFFA57C50),
+        width: 2,
       ),
     );
   }
