@@ -11,9 +11,11 @@ C:/Project/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_asset
 C:/Project/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/assets/images/icon/leaf_token.png
 C:/Project/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/assets/images/icon/naver_icon.png
 C:/Project/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/assets/images/icon/user_icon.png
+C:/Project/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/assets/images/profile/default.png
 C:/Project/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/FontManifest.json
 C:/Project/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
 C:/Project/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/kernel_blob.bin
+C:/Project/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/lib/data/user/user_data.json
 C:/Project/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/NOTICES.Z
 C:/Project/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
 C:/Project/Eco-Buddy/eco_buddy/build/windows/x64/runner/Debug/data/flutter_assets/shaders/ink_sparkle.frag
