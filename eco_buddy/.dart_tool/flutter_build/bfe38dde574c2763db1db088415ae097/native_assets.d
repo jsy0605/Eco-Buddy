@@ -1,1 +1,0 @@
- C:\\Project\\Eco-Buddy\\eco_buddy\\.dart_tool\\flutter_build\\bfe38dde574c2763db1db088415ae097\\native_assets.yaml: 
