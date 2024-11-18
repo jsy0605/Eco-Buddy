@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\dev\Eco-Buddy\eco_buddy\build\windows\x64\CMakeFiles\50f9d793dad8cdcecb4820577ff54981\INSTALL_force.rule">
+    <CustomBuild Include="C:\Project\Eco-Buddy\eco_buddy\build\windows\x64\CMakeFiles\390dee193328fc7730d074452f67afa5\INSTALL_force.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{4CA7A6FB-89B0-3058-BD26-6C57D044B268}</UniqueIdentifier>
+      <UniqueIdentifier>{F4C54275-BBA2-394F-9DF0-62071D690B13}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

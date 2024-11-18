@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../home/home_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -15,7 +14,7 @@ class LoginPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               // 앱 이름과 설명
-              Text(
+              const Text(
                 'ECO Buddy',
                 style: TextStyle(
                   fontSize: 28,
@@ -32,14 +31,11 @@ class LoginPage extends StatelessWidget {
               // 카카오 로그인 버튼
               ElevatedButton.icon(
                 onPressed: () {
-                  // 메인 페이지로 이동
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => const HomePage()),
-                  );
+                  // MainPage로 이동
+                  Navigator.pushReplacementNamed(context, '/main');
                 },
                 icon: Image.asset(
-                  'assets/images/icon/kakao_icon.png', // 카카오 아이콘 경로
+                  'assets/images/icon/kakao_icon.png',
                   width: 24,
                   height: 24,
                 ),
@@ -48,28 +44,23 @@ class LoginPage extends StatelessWidget {
                   style: TextStyle(color: Colors.black, fontSize: 16),
                 ),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFFEE500), // 카카오 배경색
-                  elevation: 0, // 음영 고정
-                  minimumSize: const Size(200, 50), // 버튼 크기
+                  backgroundColor: const Color(0xFFFEE500),
+                  elevation: 0,
+                  minimumSize: const Size(200, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8.0),
                   ),
-                  splashFactory: NoSplash.splashFactory, // 클릭 효과 제거
-                  foregroundColor: Colors.transparent, // 클릭/호버 효과 제거
                 ),
               ),
               const SizedBox(height: 16),
               // 네이버 로그인 버튼
               ElevatedButton.icon(
                 onPressed: () {
-                  // 메인 페이지로 이동
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => const HomePage()),
-                  );
+                  // MainPage로 이동
+                  Navigator.pushReplacementNamed(context, '/main');
                 },
                 icon: Image.asset(
-                  'assets/images/icon/naver_icon.png', // 네이버 아이콘 경로
+                  'assets/images/icon/naver_icon.png',
                   width: 24,
                   height: 24,
                 ),
@@ -78,14 +69,12 @@ class LoginPage extends StatelessWidget {
                   style: TextStyle(color: Colors.white, fontSize: 16),
                 ),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF03C75A), // 네이버 배경색
-                  elevation: 0, // 음영 고정
-                  minimumSize: const Size(200, 50), // 버튼 크기
+                  backgroundColor: const Color(0xFF03C75A),
+                  elevation: 0,
+                  minimumSize: const Size(200, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8.0),
                   ),
-                  splashFactory: NoSplash.splashFactory, // 클릭 효과 제거
-                  foregroundColor: Colors.transparent, // 클릭/호버 효과 제거
                 ),
               ),
             ],

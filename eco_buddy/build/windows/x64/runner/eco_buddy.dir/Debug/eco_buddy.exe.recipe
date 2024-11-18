@@ -2,13 +2,13 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\dev\Eco-Buddy\eco_buddy\build\windows\x64\x64\Debug\ZERO_CHECK</FullPath>
+      <FullPath>C:\Project\Eco-Buddy\eco_buddy\build\windows\x64\x64\Debug\ZERO_CHECK</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\dev\Eco-Buddy\eco_buddy\build\windows\x64\flutter\x64\Debug\flutter_assemble</FullPath>
+      <FullPath>C:\Project\Eco-Buddy\eco_buddy\build\windows\x64\flutter\x64\Debug\flutter_assemble</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\dev\Eco-Buddy\eco_buddy\build\windows\x64\runner\Debug\eco_buddy.exe</FullPath>
+      <FullPath>C:\Project\Eco-Buddy\eco_buddy\build\windows\x64\runner\Debug\eco_buddy.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

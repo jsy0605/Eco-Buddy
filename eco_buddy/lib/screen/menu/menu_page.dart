@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../common/widget/custom_bottom_bar.dart';
 import '../../data/repository/user_repository.dart';
 import '../../data/model/user_model.dart';
 
@@ -125,22 +124,6 @@ class _MenuPageState extends State<MenuPage> {
               ),
             ],
           );
-        },
-      ),
-      bottomNavigationBar: CustomBottomBar(
-        currentIndex: 2, // 메뉴 페이지는 인덱스 2
-        onTap: (index) {
-          // 다른 페이지로 이동
-          if (index != 2) {
-            switch (index) {
-              case 0:
-                Navigator.pushNamed(context, '/stats'); // 통계 페이지로 이동
-                break;
-              case 1:
-                Navigator.pushNamed(context, '/home'); // 홈 페이지로 이동
-                break;
-            }
-          }
         },
       ),
     );

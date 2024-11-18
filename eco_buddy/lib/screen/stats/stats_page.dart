@@ -2,23 +2,9 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fl_chart/fl_chart.dart';
-import '../../common/widget/custom_bottom_bar.dart'; // CustomBottomBar import
 
-class StatsPage extends StatefulWidget {
+class StatsPage extends StatelessWidget {
   const StatsPage({Key? key}) : super(key: key);
-
-  @override
-  State<StatsPage> createState() => _StatsPageState();
-}
-
-class _StatsPageState extends State<StatsPage> {
-  late Future<Map<String, dynamic>> statsData;
-
-  @override
-  void initState() {
-    super.initState();
-    statsData = _loadStatsData();
-  }
 
   Future<Map<String, dynamic>> _loadStatsData() async {
     try {
@@ -36,70 +22,49 @@ class _StatsPageState extends State<StatsPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('통계'),
-        backgroundColor: Colors.green,
-      ),
-      body: FutureBuilder<Map<String, dynamic>>(
-        future: statsData,
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
-          } else if (snapshot.hasError || !snapshot.hasData) {
-            return const Center(child: Text('통계 데이터를 불러오는데 실패했습니다.'));
-          }
+    return FutureBuilder<Map<String, dynamic>>(
+      future: _loadStatsData(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Center(child: CircularProgressIndicator());
+        } else if (snapshot.hasError || !snapshot.hasData) {
+          return const Center(child: Text('통계 데이터를 불러오는데 실패했습니다.'));
+        }
 
-          final stats = snapshot.data!;
-          final timeUsage = (stats['time_usage'] as List<dynamic>).map((item) {
-            return {
-              "time": item['time'] ?? "00:00",
-              "data_used": item['data_used'] ?? 0.0,
-            };
-          }).toList() as List<Map<String, dynamic>>;
+        final stats = snapshot.data!;
+        final timeUsage = (stats['time_usage'] as List<dynamic>).map((item) {
+          return {
+            "time": item['time'] ?? "00:00",
+            "data_used": item['data_used'] ?? 0.0,
+          };
+        }).toList() as List<Map<String, dynamic>>;
 
-          return ListView(
-            padding: const EdgeInsets.all(16.0),
-            children: [
-              _buildDataOverview(stats),
-              const SizedBox(height: 16.0),
-              const Text(
-                '시간대별 데이터 사용량',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-              const SizedBox(height: 16.0),
-              _buildUsageGraph(timeUsage),
-              const SizedBox(height: 16.0),
-              const Text(
-                '시간대별 세부 정보',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-              ...timeUsage.map<Widget>((item) {
-                return ListTile(
-                  leading: const Icon(Icons.access_time),
-                  title: Text('시간: ${item['time']}'),
-                  subtitle: Text('사용량: ${item['data_used']} GB'),
-                );
-              }).toList(),
-            ],
-          );
-        },
-      ),
-      bottomNavigationBar: CustomBottomBar(
-        currentIndex: 0, // 통계 페이지는 인덱스 0
-        onTap: (index) {
-          if (index != 0) { // 현재 페이지 제외
-            switch (index) {
-              case 1:
-                Navigator.pushNamed(context, '/home'); // 홈 페이지로 이동
-                break;
-              case 2:
-                Navigator.pushNamed(context, '/menu'); // 메뉴 페이지로 이동
-                break;
-            }
-          }
-        },
-      ),
+        return ListView(
+          padding: const EdgeInsets.all(16.0),
+          children: [
+            _buildDataOverview(stats),
+            const SizedBox(height: 16.0),
+            const Text(
+              '시간대별 데이터 사용량',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 16.0),
+            _buildUsageGraph(timeUsage),
+            const SizedBox(height: 16.0),
+            const Text(
+              '시간대별 세부 정보',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            ...timeUsage.map<Widget>((item) {
+              return ListTile(
+                leading: const Icon(Icons.access_time),
+                title: Text('시간: ${item['time']}'),
+                subtitle: Text('사용량: ${item['data_used']} GB'),
+              );
+            }).toList(),
+          ],
+        );
+      },
     );
   }
 

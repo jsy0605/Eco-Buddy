@@ -14,12 +14,7 @@ class CustomBottomBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       currentIndex: currentIndex, // 현재 선택된 탭
-      onTap: (index) {
-        if (index != currentIndex) {
-          _navigateToPage(context, index);
-        }
-        onTap(index);
-      },
+      onTap: onTap, // 탭 선택 시 콜백 호출
       items: const [
         BottomNavigationBarItem(
           icon: Icon(Icons.bar_chart),
@@ -37,19 +32,5 @@ class CustomBottomBar extends StatelessWidget {
       selectedItemColor: Colors.green,
       unselectedItemColor: Colors.grey,
     );
-  }
-
-  void _navigateToPage(BuildContext context, int index) {
-    switch (index) {
-      case 0:
-        Navigator.pushNamed(context, '/stats'); // 통계 페이지로 이동
-        break;
-      case 1:
-        Navigator.pushNamed(context, '/home'); // 홈 페이지로 이동
-        break;
-      case 2:
-        Navigator.pushNamed(context, '/menu'); // 메뉴 페이지로 이동
-        break;
-    }
   }
 }

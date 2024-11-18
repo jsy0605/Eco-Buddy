@@ -1,4 +1,4 @@
-# Install script for directory: C:/dev/Eco-Buddy/eco_buddy/windows/flutter
+# Install script for directory: C:/Project/Eco-Buddy/eco_buddy/windows/flutter
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:eco_buddy/screen/home/home_page.dart';
-import 'package:eco_buddy/screen/menu/menu_page.dart';
-import 'package:eco_buddy/screen/stats/stats_page.dart';
+import 'screen/main/main_page.dart'; // MainPage import
+import 'screen/login/login_page.dart'; // LoginPage import
 
 void main() {
   runApp(const MyApp());
@@ -13,12 +12,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      initialRoute: '/home', // 초기 화면
+      debugShowCheckedModeBanner: false, // 디버그 배너 제거
+      title: 'Eco Buddy',
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+      ),
+      initialRoute: '/login', // 기본 라우트를 로그인 페이지로 설정
       routes: {
-        '/home': (context) => const HomePage(), // 홈 페이지
-        '/menu': (context) => const MenuPage(), // 메뉴 페이지
-        '/stats': (context) => const StatsPage(), // 통계 페이지
+        '/login': (context) => const LoginPage(), // 로그인 페이지
+        '/main': (context) => const MainPage(),  // 메인 페이지 (하단 바 포함)
       },
     );
   }

@@ -1,6 +1,6 @@
-^C:\DEV\ECO-BUDDY\ECO_BUDDY\BUILD\WINDOWS\X64\CMAKEFILES\50F9D793DAD8CDCECB4820577FF54981\GENERATE.STAMP.RULE
+^C:\PROJECT\ECO-BUDDY\ECO_BUDDY\BUILD\WINDOWS\X64\CMAKEFILES\390DEE193328FC7730D074452F67AFA5\GENERATE.STAMP.RULE
 setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/dev/Eco-Buddy/eco_buddy/windows -BC:/dev/Eco-Buddy/eco_buddy/build/windows/x64 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/dev/Eco-Buddy/eco_buddy/build/windows/x64/eco_buddy.sln
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Project/Eco-Buddy/eco_buddy/windows -BC:/Project/Eco-Buddy/eco_buddy/build/windows/x64 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Project/Eco-Buddy/eco_buddy/build/windows/x64/eco_buddy.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

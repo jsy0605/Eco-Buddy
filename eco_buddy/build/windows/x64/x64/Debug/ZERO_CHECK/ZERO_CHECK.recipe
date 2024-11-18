@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\dev\Eco-Buddy\eco_buddy\build\windows\x64\x64\Debug\ZERO_CHECK</FullPath>
+      <FullPath>C:\Project\Eco-Buddy\eco_buddy\build\windows\x64\x64\Debug\ZERO_CHECK</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

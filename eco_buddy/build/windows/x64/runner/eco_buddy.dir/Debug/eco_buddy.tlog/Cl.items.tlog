@@ -1,5 +1,5 @@
-C:\dev\Eco-Buddy\eco_buddy\windows\runner\flutter_window.cpp;C:\dev\Eco-Buddy\eco_buddy\build\windows\x64\runner\eco_buddy.dir\Debug\flutter_window.obj
-C:\dev\Eco-Buddy\eco_buddy\windows\runner\main.cpp;C:\dev\Eco-Buddy\eco_buddy\build\windows\x64\runner\eco_buddy.dir\Debug\main.obj
-C:\dev\Eco-Buddy\eco_buddy\windows\runner\utils.cpp;C:\dev\Eco-Buddy\eco_buddy\build\windows\x64\runner\eco_buddy.dir\Debug\utils.obj
-C:\dev\Eco-Buddy\eco_buddy\windows\runner\win32_window.cpp;C:\dev\Eco-Buddy\eco_buddy\build\windows\x64\runner\eco_buddy.dir\Debug\win32_window.obj
-C:\dev\Eco-Buddy\eco_buddy\windows\flutter\generated_plugin_registrant.cc;C:\dev\Eco-Buddy\eco_buddy\build\windows\x64\runner\eco_buddy.dir\Debug\generated_plugin_registrant.obj
+C:\Project\Eco-Buddy\eco_buddy\windows\runner\flutter_window.cpp;C:\Project\Eco-Buddy\eco_buddy\build\windows\x64\runner\eco_buddy.dir\Debug\flutter_window.obj
+C:\Project\Eco-Buddy\eco_buddy\windows\runner\main.cpp;C:\Project\Eco-Buddy\eco_buddy\build\windows\x64\runner\eco_buddy.dir\Debug\main.obj
+C:\Project\Eco-Buddy\eco_buddy\windows\runner\utils.cpp;C:\Project\Eco-Buddy\eco_buddy\build\windows\x64\runner\eco_buddy.dir\Debug\utils.obj
+C:\Project\Eco-Buddy\eco_buddy\windows\runner\win32_window.cpp;C:\Project\Eco-Buddy\eco_buddy\build\windows\x64\runner\eco_buddy.dir\Debug\win32_window.obj
+C:\Project\Eco-Buddy\eco_buddy\windows\flutter\generated_plugin_registrant.cc;C:\Project\Eco-Buddy\eco_buddy\build\windows\x64\runner\eco_buddy.dir\Debug\generated_plugin_registrant.obj
